@@ -4,13 +4,13 @@ using UnityEngine;
 public class Block : MonoBehaviour
 {
     [Header(" Settings ")]
-    [SerializeField] private GameObject destroyEffect;  // TODO : destroyEffect
 
     [Tooltip("Block's movement speed to the down.  More, faster")]
     [SerializeField] private float _blockSpeedDownUp = 5f; // more the faster.
 
     [Header(" Elements ")]
     [SerializeField] private GameObject imageX;
+    [SerializeField] private ParticleSystem destroyParticle;
 
     [HideInInspector] public Vector2Int position, targetPosition;
 
@@ -55,8 +55,12 @@ public class Block : MonoBehaviour
 
     public void DestroyBlock()
     {
-        // Instantiate destroyEffect 
-        // TODO: Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        // Activate destroy Effect 
+        var main = destroyParticle.main;
+        main.startColor = GetComponent<SpriteRenderer>().color; // Set particle start color to block color
+
+        destroyParticle.transform.SetParent(null); // Set the parent to null, so the particle does not destroy during the block's destruction. It will be destroyed by the Stop Action in the particle settings
+        destroyParticle.Play(); 
 
         _manager._audio_Manager.PlayAudio("BlockDestroy");
 

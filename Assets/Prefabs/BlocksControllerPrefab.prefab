@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementWaitTime: 0.4
   movementWaitTimeMin: 0.12
-  blocksDestroyWaitTime: 0.05
+  blocksDestroyWaitTime: 0.1
   blockPrefab: {fileID: 8313579622955384141, guid: 666158f082c8c57449a9f8d9bf5e272c, type: 3}
   movingBlockCount: 0
   firstTargetNumber: 8

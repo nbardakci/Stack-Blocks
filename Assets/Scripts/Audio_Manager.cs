@@ -14,6 +14,8 @@ public class Audio_Manager : MonoBehaviour
 
     public void PlayAudio(string action)
     {
+        // TODO : The play feature will be rearranged
+
         AudioClip audioClip = null;
 
         switch (action)
