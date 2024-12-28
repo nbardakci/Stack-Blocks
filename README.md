@@ -1,6 +1,6 @@
 Stack Block Game Prototype - Unity C#
 
-WebGL: https://play.unity.com/mg/other/stack-block-game-prototype
+WebGL: https://play.unity.com/tr/games/2c0996fc-2acb-4890-81dd-50878eeb1885/stack-block-game-prototype
 
 Game Video: https://youtu.be/1FuoM8sShvc
 
